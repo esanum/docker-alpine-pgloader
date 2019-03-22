@@ -1,0 +1,11 @@
+---
+# In order for this to work, you have to set the Docker Hub username and
+# password:
+#
+# travis env set DOCKER_USERNAME myusername
+# travis env set DOCKER_PASSWORD secretsecret
+language: shell
+
+script:
+  - docker build . -t esanumeventapp/alpine-pgloader
+  - docker push esanumeventapp/alpine-pgloader:latest
