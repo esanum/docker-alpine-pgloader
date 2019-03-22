@@ -10,3 +10,10 @@ script:
   - docker build . -t esanumeventapp/alpine-pgloader
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push esanumeventapp/alpine-pgloader:latest
+
+notifications:
+  email: false
+  slack: esanum:XFAkvhriKLtaV89LA5CUnSEN
+  on_success: never
+  on_failure: always
+  notify: true
