@@ -1,6 +1,11 @@
+[![Build Status](https://travis-ci.com/esanum/docker-alpine-pgloader.svg?branch=master)](https://travis-ci.com/esanum/docker-alpine-pgloader)
+
 # docker-alpine-pgloader
 
 This image builds pgloader on `alpine:3.9` into `/opt/src/pgloader/build/bin/pgloader`.
+
+## Example usage
+
 If you want to use `pgloader` in your own image you can `COPY` it with multi-step
 builds like this:
 
