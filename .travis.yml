@@ -8,4 +8,5 @@ language: shell
 
 script:
   - docker build . -t esanumeventapp/alpine-pgloader
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push esanumeventapp/alpine-pgloader:latest
